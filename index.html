@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Learning JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- how to link external JavaScript file
+  <script type="text/javascript" src="main.js"></script>
+   -->
+</head>
+
+<body>
+  <div class="header">
+    <h1>Learning JavaScript</h1>
+    <p>with Brad Traversy</p>
+  </div>
+
+  <div class="container">
+
+  </div>
+
+
+  <!-- using local JavaScript just for this training -->
+  <script type="text/javascript">
+    // alert('Script Tags Work');
+    // Number
+    // String
+    // Array
+    // Object
+
+    var number1 = 35;
+    var number2 = 40;
+    // "alert() does a little popup from web browser"
+    //alert(number1 + number2);
+    //alert('my favorite number is: ' + number1);
+
+    // Array
+    //var color = [];
+    var colors1 = ['red', 'blue', 'green'];
+    //alert(colors);
+    //alert(colors1[1]);
+
+    var colors2 = new Array('red', 'blue', 'green');
+    //colors2[3] = 'purple'; // dynamically adds to existing Array
+    colors2.push('cyan'); // preferred way to add to array
+    //alert(colors2);
+
+    // mixed type Array
+    var numbers1 = [5, 77, 6, 'Seven']
+    //alert(numbers1);
+    var length = numbers1.length;
+    //alert('length = ' + length);
+
+    // Loops
+    // FYI in Chrome browser F12 will open debug/console window
+    console.log('Loops');
+    //console.log('for');
+    //for (var i = 0; i < 10; i++) {
+    //  console.log(i);
+    //}
+
+    //console.log('while');
+    // var i = 0
+    // while(i < 10){
+    //     console.log(i);
+    //     i++;
+    // }
+
+    var numbers = [33, 54, 72, 18, 92];
+    numbers.reverse();
+
+    // console.log('forEach');
+    // numbers.forEach(function(number) {
+    //   console.log(number);
+    // });
+
+    // console.log('for on array');
+    // for (var i = 0; i < numbers.length; i++) {
+    //   console.log(numbers[i]);
+    // }
+
+    //console.log('Conditionals');
+
+    // == equality, data types can be different (implied cast to common type)
+    // === equality, data types must be identical
+    // console.log('if-then-else');
+    // var1 = 3;
+    // var2 = 4;
+    // if (var1 == var2 && var1 == 3) {
+    //   console.log('This is True');
+    // } else {
+    //   console.log('This is False');
+    // }
+    //
+    // console.log('Switch');
+    // var fruit = 'apple';
+    // switch (fruit) {
+    //   case "banana":
+    //     alert('I hate bananas');
+    //     break;
+    //   case "apple":
+    //     alert('I love apples');
+    //     break;
+    //   default:
+    //     alert('I love all other fruits');
+    //     break;
+    //}
+
+    console.log('Objects');
+
+    // Like JSON (is JSON?)
+    var person = {
+      firstName: 'Brad',
+      lastName: 'Traversy',
+      age: 34
+    }
+    console.log(person.firstName);
+
+
+    // object literal (created without class or constructor)
+    var person = {
+      firstName: 'Brad',
+      lastName: 'Traversy',
+      age: 34,
+      children: ['Brianna', 'Nicholas'],
+      address: {
+        street: '555 Something St',
+        city: 'Boston',
+        state: 'MA'
+      },
+      fullName: function() {
+        return this.firstName + " " + this.lastName;
+      }
+    }
+
+    console.log(person.fullName());
+
+
+    // object constructor
+    var apple = new Object();
+    // adding members and methods at run-time
+    apple.color = 'red';
+    apple.shape = 'round';
+    apple.describe = function() {
+      return 'An apple is the color ' + this.color + ' and is the shape ' + this.shape + '.';
+    }
+
+    // show Object
+    console.log(apple);
+    console.log(apple.describe());
+
+  </script>
+</body>
+
+</html>
